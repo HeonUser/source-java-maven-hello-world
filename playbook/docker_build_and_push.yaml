@@ -3,8 +3,8 @@
   gather_facts: false
 
   tasks:
-    - command: docker image build -t repush/cicdproject java-hello-world/
-    - command: docker login -u repush -p "{{ lookup('env', 'PASS') }}"
+    - command: docker image build -t amttgod/cicdproject java-hello-world/
+    - command: docker login -u amttgod -p "{{ lookup('env', 'PASS') }}"
     - command: docker push amttgod/cicdproject
     - command: docker logout
 
